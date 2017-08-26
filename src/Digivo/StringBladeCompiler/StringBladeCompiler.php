@@ -16,7 +16,7 @@ class StringBladeCompiler extends BladeCompiler implements CompilerInterface
         $blade = app('view')->getEngineResolver()->resolve('blade')->getCompiler();
 
         parent::__construct($filesystem, $cache_path);
-        $this->rawTags = $blade->getRawTags();
+        $this->rawTags = $blade->rawTags;
         $this->contentTags = $blade->getContentTags();
         $this->escapedTags = $blade->getEscapedContentTags();
         $this->extensions = $blade->getExtensions();
